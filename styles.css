@@ -50,3 +50,14 @@ body {
   margin-top: 20px;
   text-align: left;
 }
+
+@media (max-width: 768px) {
+  /* 768px 이하인 경우에만 적용됩니다 */
+  .container {
+    flex-direction: column;
+  }
+
+  .history-section {
+    order: 2;
+  }
+}
