@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>야구 게임</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-section">
+        <h1>야구 게임</h1>
+        <div id="gameStartContainer">
+          <p>게임을 시작하려면 '시작' 버튼을 눌러주세요.</p>
+          <button onclick="startGame()">시작</button>
+        </div>
+        <div id="gameContainer" style="display: none">
+          <form onsubmit="makeGuess(); return false">
+            <p>0~9 사이의 중복되지 않는 3개의 숫자를 선택하세요.</p>
+            <input
+              type="number"
+              id="numberInput"
+              min="0"
+              max="999"
+              maxlength="4"
+            />
+            <button type="submit">입력</button>
+          </form>
+        </div>
+      </div>
+      <div class="history-section">
+        <div id="result"></div>
+        <div id="history"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
